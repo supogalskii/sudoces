@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContatosController;
+use App\Http\Controllers\ReceitasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +16,13 @@ use App\Http\Controllers\ContatosController;
 */
 
 Route::get('/', function () {
-    return view('contatos/');
+    return redirect('/');
 });
 
-Route::resource('contato',ContatosController::class);
+Route::get('contatos/buscar',[ContatosController::class,'buscar']);
+
+Route::resource('contatos',ContatosController::class);
+
+Route::get('receitas/buscar',[ReceitasController::class,'buscar']);
+Route::resource('receitas',ReceitasController::class);;
 
