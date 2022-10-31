@@ -16,7 +16,7 @@ class ContatosController extends Controller
      */
     public function index()
     {
-       $contatos = Contato::all();
+       $contatos = Contato::paginate(5);
        return view('contato.index',array('contatos'=> $contatos,'busca'=>null));
     }
 
@@ -57,8 +57,8 @@ class ContatosController extends Controller
         $contato->estado = $request->input('estado');
         if($contato->save()){
             if($request->hasFile('foto')){
-                $imagem = $request->file("foto");
-                $nomearquivo =md5($contato->id).".".$imagem->getClienteOriginalExtension();
+                $imagem = $request->file('foto');
+                $nomearquivo = md5($contato->id).".".$imagem->getClientOriginalExtension();
                 $request->file('foto')->move(public_path('.\img\contatos'),$nomearquivo);
             }
             return redirect('contatos');

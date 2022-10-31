@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Receitas;
-use App\Models\Receita;
 use Illuminate\Http\Request;
 use Session;
 
@@ -107,7 +106,7 @@ class ReceitasController extends Controller
         if($request->hasFile('foto')){
             $imagem = $request->file('foto');
             $nomearquivo = md5($receitas->id).".".$imagem->getClientOriginalExtension();
-            $request->file('foto')->move(public_path('.\img\livros'),$nomearquivo);
+            $request->file('foto')->move(public_path('.\img\receitas'),$nomearquivo);
         }
         $receitas->titulo = $request->input('titulo');
         $receitas->ingredientes = $request->input('ingredientes');
@@ -130,11 +129,11 @@ class ReceitasController extends Controller
         
         $receitas = Receitas::find($id);
             if (isset($request->foto)) {
-            unlink($request->foto);
+                unlink($request->foto);
             }
             $receitas->delete();
-            Session::flash('mensagem','Livro Excluído com Sucesso');
-            return redirect(url('livros/'));
+            Session::flash('mensagem','Receita Excluída com Sucesso');
+            return redirect(url('receitas/'));
         }
     }
 

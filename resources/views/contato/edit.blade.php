@@ -19,7 +19,7 @@
         </div>
     @endif
     <br />
-    {{Form::open(['route' => ['contatos.update',$contato->id], 'method' => 'PUT'])}}
+    {{Form::open(['route' => ['contatos.update',$contato->id], 'method' => 'PUT','enctype'=>'multipart/form-data'])}}
         {{Form::label('nome', 'Nome')}}
         {{Form::text('nome',$contato->nome,['class'=>'form-control','required','placeholder'=>'Nome completo'])}}
         {{Form::label('email', 'e-mail')}}

@@ -5,7 +5,7 @@
         <h1>Criar novo Contato</h1>
         <br>
         <br>
-        {{Form::open(['route'=>'contatos.store','method'=> 'POST'])}}
+        {{Form::open(['route'=>'contatos.store','method'=> 'POST','enctype'=>'multipart/form-data'])}}
         {{Form::label('nome', 'Nome')}}
         {{Form::text('nome','',['class'=>'form-control','required','placeholder'=>'Nome Completo'])}}
         {{Form::label('email','e-mail')}}

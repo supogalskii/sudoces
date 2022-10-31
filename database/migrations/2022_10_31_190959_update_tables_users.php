@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('receitas', function (Blueprint $table) {
-            $table->id();
-            $table->string('titulo',200);
-            $table->text('ingredientes');
-            $table->text('modopreparo');
-            $table->text('info');
-            $table->timestamps();
+        Schema::table('receitas', function (Blueprint $table) {
+           
+            $table->text('ingredientes')->change();
+            $table->text('modopreparo')->change();
+            
         });
     }
 
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('receitas');
+        //
     }
 };

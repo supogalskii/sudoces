@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contato;
+use App\Models\Receitas;
 use Illuminate\Http\Request;
 
-class DocesController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,9 @@ class DocesController extends Controller
      */
     public function index()
     {
-        //
+        $receitas = Receitas::all()->count();
+        $contatos = Contato::all()->count();
+        return view('home',array('receitas'=>$receitas,'Contatos'=>$contatos));
     }
 
     /**

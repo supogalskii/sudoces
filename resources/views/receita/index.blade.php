@@ -40,4 +40,5 @@
             </tr>
         @endforeach
     </table> 
+    {{$receitas->links()}}
 @endsection
