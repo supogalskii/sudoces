@@ -9,7 +9,8 @@
         {{Form::open(['url'=>'contatos/buscar','method'=>'GET'])}}
         <div class="row">
         <div class="col-sm-3">
-        <a class="btn btn-sucess" href="{{url('contatos/create')}}">Criar</a>
+        <a class="btn btn-outline-success" href="{{url('contatos/create')}}">Criar</a>
+        <br>
         </div>
         <div class="cl-sm-9">
             <div class="input-group ml-5">

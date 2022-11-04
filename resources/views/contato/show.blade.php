@@ -19,7 +19,7 @@
         }  
     @endphp
     {{Html::image(asset($nomeimagem),'Foto de'.$contato->nome,["class"=>"card-img-top thumbnail"])}}
-    <div class=""card-body>
+    <div class="card-body">
         <h1>Contato-{{$contato->nome}}</h1>
     </div>
 <div class="card-body">

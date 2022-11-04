@@ -19,7 +19,7 @@
         {{Form::label('foto', 'Foto')}}
         {{Form::file('foto',['class'=>'form-control','id'=>'foto'])}}
         <br>
-        {{form::submit('Salvar',['class'=>'btn btn-success'])}}
-        {{!!Form::button('Cancelar',['onclick'=>'javascript:history.go(-1)','class'=>'btn btn-secondary'])!!}}
+        {{form::submit('Salvar',['class'=>'btn btn-outline-success'])}}
+        {!!Form::button('Cancelar',['onclick'=>'javascript:history.go(-1)','class'=>'btn btn-outline-secondary'])!!}
         {{Form::close()}}
         @endsection

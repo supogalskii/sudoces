@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<div class="container">
+<nav class="navbar navbar-expand-sm " style="background-color: rgb(233, 166, 186) ;">
     <div class="container-fluid">
         <ul class="navbar-nav">
         <li class="nav-item">
@@ -13,3 +14,4 @@
     </ul>
     </div>
 </nav>
+</div>

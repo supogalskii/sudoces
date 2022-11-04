@@ -9,17 +9,17 @@
         {{Form::open(['url'=>'receitas/buscar','method'=>'GET'])}}
         <div class="row">
         <div class="col-sm-3">
-        <a class="btn btn-sucess" href="{{url('receitas/create')}}">Criar</a>
+        <a class="btn btn-outline-success" href="{{url('receitas/create')}}">Criar</a>
         </div>
         <div class="cl-sm-9">
             <div class="input-group ml-5">
                 @if($busca!==null)
-                &nbsp;<a class="btn btn-info" href="{{url('receitas/')}}">Todos</a>&nbsp;
+                &nbsp;<a class="btn btn-dark" href="{{url('receitas/')}}">Todos</a>&nbsp;
                 @endif
                 {{Form::text('busca',$busca,['class'=>'form-control','required','placeholder'=>'buscar'])}}
                 &nbsp;
                 <span class="input-group-btn">
-                    {{Form::submit('Buscar',['class'=> 'btn btn-btn-secondary'])}}
+                    {{Form::submit('Buscar',['class'=> 'btn btn-dark'])}}
                 </span>
             </div>
         </div>

@@ -25,7 +25,7 @@ Route::get('contatos/buscar',[ContatosController::class,'buscar']);
 Route::resource('contatos',ContatosController::class);
 
 Route::get('receitas/buscar',[ReceitasController::class,'buscar']);
-Route::resource('receitas',ReceitasController::class);;
+Route::resource('receitas',ReceitasController::class);
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

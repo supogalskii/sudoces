@@ -31,7 +31,7 @@
         {{Form::label('foto', 'Foto')}}
         {{Form::file('foto',['class'=>'form-control','id'=>'foto'])}}
         <br />
-        {{Form::submit('Salvar',['class'=>'btn btn-success'])}}
+        {{Form::submit('Salvar',['class'=>'btn btn-outline-success'])}}
         <a href="{{url('/')}}" class="btn btn-secondary">Voltar</a>
     {{Form::close()}}
 @endsection

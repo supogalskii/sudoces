@@ -10,15 +10,15 @@
         {{Form::text('titulo','',['class'=>'form-control','required','placeholder'=>'Nome da Receita'])}}
         {{Form::label('ingredientes','Ingredientes')}}
         {{Form::text('ingredientes','',['class'=>'form-control','required','placeholder'=>'Digite os Ingredientes'])}}
-        {{Form::label('modopreparo',  'Modopreparo')}}
+        {{Form::label('modopreparo',  'Modo De Preparo')}}
         {{form::text('modopreparo','',['class'=>'form-control','required','placeholder'=>'Modo de Preparo'])}}
-        {{Form::label('info','Info')}}
+        {{Form::label('info','Informações Adicionais')}}
         {{Form::text('info','',['class'=>'form-control','required','placeholder'=>'Informações Adicionais'])}}
         {{Form::label('foto','Foto')}}
         {{Form::file('foto',['class'=>'form-control','id'=>'foto'])}}
         <br>
-        {{form::submit('Salvar',['class'=>'btn btn-success'])}}
-        {{!!Form::button('Cancelar',['onclick'=>'javascript:history.go(-1)','class'=>'btn btn-secondary'])!!}}
+        {{form::submit('Salvar',['class'=>'btn btn-outline-success'])}}
+        {!!Form::button('Cancelar',['onclick'=>'javascript:history.go(-1)','class'=>'btn btn-outline-secondary'])!!}
         <br>
         {{Form::close()}}
 @endsection

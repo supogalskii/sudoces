@@ -21,7 +21,7 @@ class ReceitasController extends Controller
     
     public function buscar(Request $request) {
         $receitas = Receitas::where('titulo','LIKE','%'.$request->input('busca').'%')->orwhere('ingredientes','LIKE','%'.$request->input('busca').'%')->orwhere('modopreparo','LIKE','%'.$request->input('busca').'%')->orwhere('info','LIKE','%'.$request->input('busca').'%')->simplepaginate(5);
-        return view('receita.index',array('livros' => $receitas,'busca'=>$request->input('busca')));
+        return view('receita.index',array('receitas' => $receitas,'busca'=>$request->input('busca')));
     }
 
     /**
@@ -67,12 +67,14 @@ class ReceitasController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Receitas  $receitas
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Receitas $id)
+    public function show($id)
     {
         $receitas = Receitas::find($id);
-        return view('receita.show',array('receita' => $receitas));
+        
+        return view('receita.show',array('receitas' => $receitas));
     }
 
     /**
