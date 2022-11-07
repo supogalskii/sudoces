@@ -20,14 +20,14 @@
                 {{Form::text('busca',$busca,['class'=>'form-control','required','placeholder'=>'buscar'])}}
                 &nbsp;
                 <span class="input-group-btn">
-                    {{Form::submit('Buscar',['class'=> 'btn btn-btn-secondary'])}}
+                    {{Form::submit('Buscar',['class'=> 'btn btn-outline-secondary'])}}
                 </span>
             </div>
         </div>
     </div>    
     {{form::close()}}       
     <br />
-    <table class="table table-striped">
+    <table class="table table-bordered" style="background-color: rgb(255, 208, 222);">
         @foreach ($contatos as $contato)
             <tr>
                 <td>
@@ -37,4 +37,9 @@
         @endforeach
     </table> 
     {{$contatos->links()}}
+
+    <br>
+    <div>
+        <a href="http://localhost:8000/home" class="btn btn-outline-primary">Voltar</a> 
+</div>
 @endsection        

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="center">
 <nav class="navbar navbar-expand-sm " style="background-color: rgb(233, 166, 186) ;">
     <div class="container-fluid">
         <ul class="navbar-nav">

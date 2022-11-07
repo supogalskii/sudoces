@@ -83,9 +83,10 @@ class ReceitasController extends Controller
      * @param  \App\Models\Receitas  $receitas
      * @return \Illuminate\Http\Response
      */
-    public function edit(Receitas $receitas)
+    public function edit($id)
     {
-        //
+       $receitas = Receitas::find($id);
+       return view('receita.edit',array('receitas' => $receitas));
     }
 
     /**
